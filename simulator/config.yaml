@@ -1,0 +1,47 @@
+file_path: '../fedamon/datasets/ericsson/cpu.csv'
+
+thresholds: [0.97073]
+
+model_paras:
+  ar_sample_size:
+    start: 100
+    end: 100
+    interval: 1
+  lms_scaled_lr:
+    start: 100
+    end: 100
+    interval: 1
+
+
+models:
+  - model_type: 'sa'
+    lags: 0
+  - model_type: 'ar'
+    lags: 3
+  - model_type: 'ar'
+    lags: 4
+  - model_type: 'ar'
+    lags: 6
+  - model_type: 'ar'
+    lags: 8
+  - model_type: 'lms'
+    lags: 6
+  - model_type: 'lms'
+    lags: 28
+  - model_type: 'pla'
+    lags: 8
+  - model_type: 'pla'
+    lags: 29
+  - model_type: 'pla'
+    lags: 39
+
+
+adaptive:
+  alphas: [0]
+  window_sizes: [100]
+  criterias: [0.01]
+
+speed:
+  users: 100
+
+initialization: 50

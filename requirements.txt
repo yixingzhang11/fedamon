@@ -1,0 +1,4 @@
+numpy==1.24.4
+statsmodels==0.14.1
+PyYAML==6.0.1
+
